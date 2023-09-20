@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+	<h1>자바 스크립트</h1>
+	<h2>객체</h2>
+
+
+</head>
+<body>
+</body>
+
+
+<script type="text/javascript">	
+
+	console.log("=============================================");
+	let guestVo = {
+		name:"황근출",
+		password:"아쎄이 원위치",
+		content:"새끼... 기열!",
+		showInfo:function(){
+			console.log(this.name + ", " + this.password + ", " + this.content);
+		}		
+	};
+	
+	console.log(typeof guestVo);
+	console.log(guestVo.name);
+	console.log(guestVo.password);
+	console.log(guestVo.content);
+	console.log(guestVo.showInfo());
+	
+	console.log("=============================================");
+	let guestVo2 = {};
+	guestVo2.name = "김두한";
+	guestVo2.password = "1972";
+	guestVo2.content = "김두한은 쓰러졌다.";
+	console.log(guestVo2);
+	console.log(guestVo2.name);
+	console.log(guestVo2.password);
+	console.log(guestVo2.content);
+	
+	let si = function(){
+		console.log(this.name + ", " + this.password + ", " + this.content);
+	}
+	guestVo2.showInfo = si;
+	console.log(guestVo2.showInfo());
+	
+	////////////////////////////////////////////////////////
+	console.log(guestVo.name);
+	console.log(guestVo[name]);	
+	
+</script>
+
+
+
+
+</html>
+
+
+
+
+
+

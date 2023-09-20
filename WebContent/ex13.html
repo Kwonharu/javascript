@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+	<h1>자바 스크립트</h1>
+	<h2>변수의 범위</h2>
+
+
+</head>
+<body>
+</body>
+
+
+<script>
+	let x; //전역변수
+	
+	function testFunc(){
+		let y;		//지역변수 
+		x = 10;     //전역변수
+		y = 20;     
+		z = 30;     //전역변수
+		
+		if(y == 20) {
+			let b = 40;  //지역변수
+			b++;
+			console.log("b = " + b);
+		}
+		
+		//이곳에서 변수 b, x, y, z에 접근가능?
+		//console.log("b = " + b);	//x
+		console.log("x = " + x);	//o
+		console.log("y = " + y);	//o
+		console.log("z = " + z);	//o
+		
+	}
+		
+	testFunc();
+	//이곳에서 변수 b, x, y, z에 접근가능?
+	//console.log("b = " + b);	//x
+	console.log("x = " + x);	//o
+	//console.log("y = " + y);	//x
+	console.log("z = " + z);	//o
+	
+</script>
+
+
+
+
+</html>
+
+
+
+

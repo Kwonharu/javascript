@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+	<h1>자바 스크립트</h1>
+	<h2>배열</h2>
+
+
+</head>
+<body>
+</body>
+
+
+<script>	
+	
+	//배옇 선언 방법 1
+	var arr01 = new Array();
+	arr01[0] = 1;
+	arr01[1] = 100;
+	
+	console.log(arr01[0]);
+	console.log(arr01[1]);
+	
+	////////////////////////////////////////
+	console.log("==================================");
+	var arr02 = [];
+	arr02[0] = 1;
+	arr02[1] = 2.5;
+	arr02[2] = "썩션-";
+	arr02[3] = "딥 다크 판타지";
+	arr02[4] = 5>3;
+	arr02[5] = function(){ console.log("나는 나는 나느으은... 일요일 일요일 없다 없다 없다"); };
+	
+	for(let i = 0; i<arr02.length; i++){
+		console.log(arr02[i]);
+	}
+	
+	arr02[5]();
+	//arr02[0](); -> 오류
+	
+	/////////////////////////////////////////
+	console.log("==================================");
+	var arr03 = [1, 2.5, "뭉탱이ㅣㅣㅣㅣㅣㅣㅣ", ["수", "미", "아"] ];
+	console.log(arr03);
+	console.log(arr03[3][0]);
+
+	/////////////////////////////////////////
+	console.log("==================================");
+	var nameArray = [];
+	
+	//배열의 맨 뒤에 추가
+	nameArray.push("아쎄이");
+	nameArray.push("원위치");
+	console.log(nameArray);
+	
+	nameArray.push("새끼... 기열!");
+	console.log(nameArray);
+	
+	//배열에서 맨 뒤 값 삭제
+	nameArray.pop();
+	console.log(nameArray);
+	
+	
+</script>
+
+
+
+
+</html>
+
+
+
+
