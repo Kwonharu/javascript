@@ -67,15 +67,20 @@ window.onload = function(){
 	let btnList = [];
 	for(let i = 0; i<10; i++){
 		btnList.push(document.getElementById("btn"+i));
+		btnList[i].onclick = function(){
+			display.value += i;
+		}
 	}
 	console.log(btnList);
 	
+	/*
 	for(let i = 0; i<10; i++){
 		btnList[i].onclick = function(){
 			display.value += i;
 		}
 	}
-	
+	*/
+
 	btnClear.onclick = function(){
 		display.value = "";
 	}
@@ -98,11 +103,28 @@ window.onload = function(){
 	
 	btnEqual.onclick = function(){
 		let calc = display.value;
-		let result = eval(calc);
+		let arr = calc.split("");
+		let no1 = parseInt(arr[0]);
+		let op = arr[1];
+		let no2 = parseInt(arr[2]);
+		
+		let result;
+		
+		if(op == '+') {
+			result = no1 + no2;
+		} else if(op == '-') {
+		    result = no1 - no2;
+		} else if(op == '*') {
+		    result = no1 * no2;
+		} else if(op == '/') {
+		    result = no1 / no2;
+		}
+		//let result = eval(calc);
+		/////////////// eval 쓰지마ㅏㅏㅏㅏㅏㅏㅏㅏㅏㅏㅏㅏㅏㅏㅏㅏㅏㅏ //////////////////
 		display.value = result
+
 	}
 	
-
 }
 
 </script>
