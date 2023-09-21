@@ -50,7 +50,60 @@
 
 <script type="text/javascript">
 
+window.onload = function(){
+	
+	let display = document.getElementById("display");
+	
+	let btnDiv = document.getElementById("btnDiv");
+	let btnMulti = document.getElementById("btnMulti");
+	let btnPlus = document.getElementById("btnPlus");
+	let btnMinus = document.getElementById("btnMinus");
+	
+	let btnClear = document.getElementById("btnClear");
+	
+	let btnEqual = document.getElementById("btnEqual");
+	
+	
+	let btnList = [];
+	for(let i = 0; i<10; i++){
+		btnList.push(document.getElementById("btn"+i));
+	}
+	console.log(btnList);
+	
+	for(let i = 0; i<10; i++){
+		btnList[i].onclick = function(){
+			display.value += i;
+		}
+	}
+	
+	btnClear.onclick = function(){
+		display.value = "";
+	}
+	
+	btnMinus.onclick = function(){
+		display.value += "-";
+	}
+	
+	btnPlus.onclick = function(){
+		display.value += "+";
+	}
+	
+	btnMulti.onclick = function(){
+		display.value += "*";
+	}
+	
+	btnDiv.onclick = function(){
+		display.value += "/";
+	}
+	
+	btnEqual.onclick = function(){
+		let calc = display.value;
+		let result = eval(calc);
+		display.value = result
+	}
+	
 
+}
 
 </script>
 
